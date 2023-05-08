@@ -1,4 +1,41 @@
 :root {
   --snow: #dadff7;
-  --night: #282728;
+  --dark: #282728;
+  --bright: #ccff33;
+  --rounded: 5px;
+}
+a {
+  color: var(--snow);
+  text-decoration: none;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+body {
+  color: var(--dark);
+  background-color: var(--snow);
+}
+
+header {
+  color: var(--snow);
+  background-color: var(--dark);
+}
+
+li {
+  display: inline-block;
+}
+
+img {
+  border: 2px solid var(--bright);
+  border-radius: var(--rounded);
+  margin: 10px;
+}
+
+footer {
+  color: var(--snow);
+  background-color: var(--dark);
 }

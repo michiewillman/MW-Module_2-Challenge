@@ -13,9 +13,22 @@
   color: var(--snow);
 }
 
+/* Header & Menu */
 header {
   background-color: var(--dark);
   min-height: 50px;
+  border-bottom: 1px solid var(--bright);
+}
+
+nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 10px 0 40px;
 }
 
 a {
@@ -31,16 +44,6 @@ body {
   background-color: var(--night);
 }
 
-nav ul {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-nav li {
-  display: inline-block;
-  padding: 0 10px 0 40px;
-}
 
 /* Resume Button in Nav - Includes some fun tool-tip text & Opens resume in seperate tab */
 #resume-btn:hover::after {
@@ -60,9 +63,9 @@ h2 , h3, h4 {
 
 /* Images */
 img {
-  border: 2px solid var(--bright);
+  /* border: 2px solid var(--bright); */
   border-radius: var(--rounded);
-  padding: 0;
+  /* padding: 0; */
   max-width: 100%;
 }
 
@@ -74,12 +77,15 @@ img {
 /* About Section */
 #about {
   min-height: 50vh;
+  padding: 60px 10px;
 }
 
 /* Portfolio Section Styling */
 #portfolio {
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--dark);
+  padding: 60px 10px;
 }
 
 #portfolio-container {
@@ -94,25 +100,31 @@ img {
   width: 94%;
 }
 
-.portfolio-item {
+.hover-img {
   width: 48%;
   margin: 1%;
 }
 
 /* Portfolio Item Hover Effect */
-#portfolio .portfolio-container {
+ .hover-img {
 	background-color: var(--bright);
+  margin: 10px;
 }
-.portfolio-item {
+
+#portfolio-container .hover img {
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.portfolio-item:hover {
+.hover-img img:hover {
 	opacity: .5;
 }
 
 /* Contact Section */
+#contact {
+  padding: 60px 10px;
+}
+
 #contact ul {
   margin: 20px;
   padding: 40px 10px;
@@ -133,9 +145,6 @@ footer {
 
 /* Responsive Tablet Sizes*/
 @media screen and (max-width: 992px) {
-  header {
-    height: 160px;
-  }
 
 }
 

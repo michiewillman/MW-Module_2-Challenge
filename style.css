@@ -37,6 +37,7 @@ nav li {
   padding: 0 10px 0 40px;
 }
 
+/* All Links */
 a {
   color: var(--snow);
   text-decoration: none;
@@ -46,6 +47,7 @@ a:hover {
   color: var(--bright);
 }
 
+/* Main & Body */
 body {
   background-color: var(--night);
 }
@@ -67,6 +69,7 @@ body {
   right: 0;
 }
 
+/* All Headings */
 h1 {
   font-size: 30px;
   padding: 0 0 10px 0;
@@ -79,7 +82,7 @@ h2 , h3, h4 {
 /* Images */
 img {
   border-radius: var(--rounded);
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 #profile-photo {
@@ -116,7 +119,7 @@ img {
 }
 
 .portfolio-item {
-  flex: 0 0 45%;
+  flex: 0 0 50%;
   position: relative;
   /* background-color: var(--bright); */
 }
@@ -169,7 +172,7 @@ footer {
   padding: 20px 0;
 }
 
-/* Responsive Tablet Sizes*/
+/* Tablets */
 @media screen and (max-width: 992px) {
 
 }
@@ -180,14 +183,9 @@ footer {
     min-height: 170px;
   }
 
-  nav {
+  /* nav {
     margin: 0;
-  }
-
-  /* Stack nav & footer buttons */
-  ul li {
-    display: block;
-  }
+  } */
 
   li:has(a):hover {
     background-color: #202020;
@@ -197,11 +195,11 @@ footer {
     padding: 12px 20px;
   }
 
-    #contact li {
-      display: block;
-      text-align: center;
-      padding: 15px 0 0 0;
-    }
+  #contact li {
+    display: block;
+    text-align: center;
+    padding: 15px 0 0 0;
+  }
 
 }
 
@@ -209,8 +207,8 @@ footer {
 @media screen and (max-width: 576px) {
 
     /* Stack portfolio images */
-    .portfolio-item {
+    /* .portfolio-item {
       width: 100%;
-      }
+      } */
 
 }

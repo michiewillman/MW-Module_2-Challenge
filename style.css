@@ -11,11 +11,11 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: 100;
-  color: var(--snow);
 }
 
 /* Header & Menu */
 header {
+  color: var(--snow);
   background-color: var(--dark);
   min-height: 50px;
   border-bottom: 1px solid var(--bright);
@@ -52,8 +52,8 @@ nav li:has(a):hover {
 
 /* All Links */
 a {
-  color: var(--snow);
   text-decoration: none;
+  color: var(--snow);
 }
 
 a:hover {
@@ -85,10 +85,12 @@ body {
 h1 {
   font-size: 30px;
   margin: 10px;
+  color: var(--snow);
 }
 
 h2 , h3, h5 {
   font-size: 2em;
+  color: var(--snow);
 }
 
 h4 {
@@ -106,6 +108,7 @@ img {
 #about {
   min-height: 50vh;
   padding: 60px;
+  color: var(--snow);
 }
 
 #profile-photo {
@@ -168,21 +171,18 @@ img {
 /* Contact Section */
 #contact {
   padding: 60px;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: center;
+  color: var(--snow);
 }
 
 #contact li {
-  display: inline-block;
+  display: block;
   padding: 0 1%;
 }
 
 /* Footer */
 footer {
-  color: var(--dark);
+  color: var(--night);
+  background-color: var(--bright);
   text-align: center;
   padding: 20px 0;
 }

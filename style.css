@@ -4,27 +4,23 @@
   --dark: #282728;
   --night: #1F1E1F;
   --bright: #ccff33;
-  --rounded: 20px;
+  --rounded: 15px;
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1em;
   font-weight: 100;
 }
 
 /* Header & Menu */
 header {
-  color: var(--snow);
-  background-color: var(--dark);
+  color: var(--night);
+  background-color: var(--snow);
   min-height: 50px;
   border-bottom: 1px solid var(--bright);
-  padding: 5px;
   position: relative; 
-}
-
-header p {
-  margin: 10px;
+  padding: 20px;
 }
 
 nav {
@@ -34,10 +30,10 @@ nav {
   right: 0;
 }
 
-
 nav li {
   flex: 0 0 20px;
   padding: 12px 20px;
+  text-align: center;
 }
 
 nav ul {
@@ -45,19 +41,15 @@ nav ul {
   justify-content: space-between;
 }
 
-/* Nav links have hover background */
-nav li:has(a):hover {
-  background-color: var(--night);
-}
-
-/* All Links */
-a {
+nav a {
+  color: var(--dark);
   text-decoration: none;
-  color: var(--snow);
 }
 
-a:hover {
-  color: var(--bright);
+/* Nav links have hover background */
+nav li:hover, 
+#contact li:has(a):hover {
+  background-color: var(--bright);
 }
 
 /* Main & Body */
@@ -65,14 +57,14 @@ body {
   background-color: var(--night);
 }
 
-/* Resume Button in Nav - Includes some fun tool-tip text & Opens resume in seperate tab */
+/* Resume Button in Nav - tool-tip text on hover & Opens resume in seperate tab */
 #resume-btn:hover::after {
   content: "Hire me! (You won't regret it) ^-^";
   color: var(--dark);
   background-color: #ffffff;
-  border-radius: var(--rounded);
+  border-radius: 5px;
   font-size: .8em;
-  width: 190px;
+  width: 200px;
   text-align: center;
   padding: 5px;
   margin: 5px;
@@ -81,11 +73,10 @@ body {
   right: 0;
 }
 
-/* All Headings */
+/* Headings */
 h1 {
   font-size: 30px;
-  margin: 10px;
-  color: var(--snow);
+  color: var(--night);
 }
 
 h2 , h3, h5 {
@@ -96,6 +87,7 @@ h2 , h3, h5 {
 h4 {
   font-size: 1em;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 
 /* Images */
@@ -114,7 +106,7 @@ img {
 #profile-photo {
   width: 200px;
   margin-bottom: 30px;
-  border-radius: 30px;
+  border-radius: var(--rounded);
   border: var(--bright) solid 1px;
 }
 
@@ -131,6 +123,10 @@ img {
 
 #portfolio button {
   display: none;
+}
+
+#portfolio-feature {
+  position: relative;
 }
 
 #portfolio-feature img {
@@ -168,6 +164,18 @@ img {
   left: 50px;
 }
 
+/* Title Tags for portfolio images */
+.title-tag {
+  background-color: var(--bright);
+  width: 180px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  padding: 10px;
+}
+
 /* Contact Section */
 #contact {
   padding: 60px;
@@ -176,7 +184,12 @@ img {
 
 #contact li {
   display: block;
-  padding: 0 1%;
+  margin: 15px 0;
+}
+
+#contact a {
+  color: var(--snow);
+  text-decoration: none;
 }
 
 /* Footer */
@@ -194,10 +207,6 @@ footer {
 
 /* Large Smartphones */
 @media screen and (max-width: 768px) {
-  header {
-    min-height: 180px;
-  }
-
   .portfolio-item {
     flex: 0 0 100%;
   }
@@ -206,6 +215,13 @@ footer {
 
 /* Small Smartphones */
 @media screen and (max-width: 600px) {
+  header {
+    min-height: 160px;
+  }
+
+  nav {
+    top: 0;
+  }
 
   nav ul {
     flex-direction: column;

@@ -30,7 +30,7 @@ header p {
 nav {
   display: flex;
   position: absolute;
-  top: 0;
+  top: 18px;
   right: 0;
 }
 
@@ -43,6 +43,11 @@ nav li {
 nav ul {
   display: flex;
   justify-content: space-between;
+}
+
+/* Nav links have hover background */
+nav li:has(a):hover {
+  background-color: var(--night);
 }
 
 /* All Links */
@@ -191,10 +196,6 @@ footer {
 @media screen and (max-width: 768px) {
   header {
     min-height: 180px;
-  }
-
-  li:has(a):hover {
-    background-color: #202020;
   }
 
   .portfolio-item {

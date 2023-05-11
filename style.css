@@ -1,3 +1,4 @@
+/* Site-wide pre-set styles */
 :root {
   --snow: #dadff7;
   --dark: #282728;
@@ -18,12 +19,15 @@ header {
   background-color: var(--dark);
   min-height: 50px;
   border-bottom: 1px solid var(--bright);
+  /* position: fixed; 
+  top: 0; */
 }
 
-nav ul {
+nav {
   position: absolute;
   top: 0;
   right: 0;
+  margin: 15px 0;
 }
 
 nav li {
@@ -47,9 +51,17 @@ body {
 
 /* Resume Button in Nav - Includes some fun tool-tip text & Opens resume in seperate tab */
 #resume-btn:hover::after {
-  content: "Hire meee! (You won't regret it) ^-^";
+  content: "Hire me! (You won't regret it) ^-^";
+  color: var(--dark);
+  background-color: #ffffff;
+  border-radius: var(--rounded);
+  font-size: .8em;
+  width: 190px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   right: 0;
 }
 
@@ -68,8 +80,10 @@ img {
 }
 
 #profile-photo {
+  width: 200px;
+  margin: 0 20px;
+  float: left;
   border-radius: 50px;
-  margin: 20px 0;
 }
 
 /* About Section */
@@ -97,8 +111,11 @@ img {
   height: 400px;
 }
 
+#portfolio-item {
+  flex: 0 0 45%;
+}
+
 .hover-img {
-  width: 48%;
   /* margin: 1%; */
   position: relative;
   background-color: var(--bright);
@@ -159,6 +176,14 @@ footer {
 
 /* Large Smartphones */
 @media screen and (max-width: 768px) {
+  header {
+    min-height: 170px;
+  }
+
+  nav {
+    margin: 0;
+  }
+
   /* Stack nav & footer buttons */
   ul li {
     display: block;
@@ -182,6 +207,7 @@ footer {
 
 /* Small Smartphones */
 @media screen and (max-width: 576px) {
+
 
     /* Stack portfolio images */
     .portfolio-item {

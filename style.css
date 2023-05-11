@@ -19,6 +19,7 @@ header {
   background-color: var(--dark);
   min-height: 50px;
   border-bottom: 1px solid var(--bright);
+  padding: 5px;
   /* position: fixed; 
   top: 0; */
 }
@@ -61,12 +62,13 @@ body {
   padding: 5px;
   margin: 5px;
   position: absolute;
-  bottom: -60px;
+  bottom: -35px;
   right: 0;
 }
 
 h1 {
   font-size: 30px;
+  padding: 0 0 10px 0;
 }
 
 h2 , h3, h4 {
@@ -95,48 +97,37 @@ img {
 /* Portfolio Section Styling */
 #portfolio {
   background-color: var(--dark);
-  padding: 60px 10px;
+  padding: 60px;
 }
 
 #portfolio-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 5%;
-  position: relative;
 }
 
-#portfolio-feature img {
-  width: 300px;
-  height: 400px;
-}
-
-#portfolio-item {
+.hover-image {
   flex: 0 0 45%;
-}
-
-.hover-img {
-  /* margin: 1%; */
   position: relative;
   background-color: var(--bright);
   margin: 10px;
 }
 
-.hover-img button {
+.hover-image button {
   display: none;
 }
 
 /* Portfolio Item Hover Effect */
-#portfolio-container .hover img {
+#portfolio-container .hover image {
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.hover-img img:hover {
+.hover-image img:hover {
 	opacity: .5;
 }
 
-.hover-img:hover button {
+.hover-image:hover button {
   color: #1F1E1F;
   border: 2px solid #1F1E1F;
   margin: 2px;

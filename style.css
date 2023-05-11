@@ -139,6 +139,11 @@ img {
   max-width: 100%;
 }
 
+.portfolio-item {
+  flex: 0 0 48%;
+  position: relative;
+}
+
 /* Portfolio image HOVER Effects */
 .hover-image:hover {
   filter: brightness(1.25);
@@ -190,6 +195,10 @@ footer {
 
   li:has(a):hover {
     background-color: #202020;
+  }
+
+  .portfolio-item {
+    flex: 0 0 100%;
   }
 
 }

@@ -4,7 +4,7 @@
   --dark: #282728;
   --night: #1F1E1F;
   --bright: #ccff33;
-  --rounded: 5px;
+  --rounded: 20px;
 }
 
 * {
@@ -20,21 +20,29 @@ header {
   min-height: 50px;
   border-bottom: 1px solid var(--bright);
   padding: 5px;
-  position: fixed; 
-  /* top: 0; */
-  z-index: 999;
+  position: relative; 
+}
+
+header p {
+  margin: 10px;
 }
 
 nav {
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 15px 0;
 }
 
+
 nav li {
-  display: inline-block;
-  padding: 0 10px 0 40px;
+  flex: 0 0 20px;
+  padding: 12px 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* All Links */
@@ -51,7 +59,6 @@ a:hover {
 body {
   background-color: var(--night);
 }
-
 
 /* Resume Button in Nav - Includes some fun tool-tip text & Opens resume in seperate tab */
 #resume-btn:hover::after {
@@ -72,30 +79,40 @@ body {
 /* All Headings */
 h1 {
   font-size: 30px;
-  padding: 0 0 10px 0;
+  margin: 10px;
 }
 
-h2 , h3, h4 {
+h2 , h3, h5 {
   font-size: 2em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
 }
 
 /* Images */
 img {
   border-radius: var(--rounded);
-  /* max-width: 100%; */
 }
 
-#profile-photo {
-  width: 200px;
-  margin: 0 20px;
-  float: left;
-  border-radius: 50px;
-}
 
 /* About Section */
 #about {
   min-height: 50vh;
-  padding: 60px 10px;
+  padding: 60px;
+}
+
+#profile-photo {
+  width: 200px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  border: var(--bright) solid 1px;
+}
+
+#about p {
+  line-height: 1.2;
+  margin-top: 20px;
 }
 
 /* Portfolio Section Styling */
@@ -108,7 +125,7 @@ img {
   display: none;
 }
 
-#portfolio-feature {
+#portfolio-feature img {
   width: 100%;
 }
 
@@ -118,19 +135,12 @@ img {
   justify-content: space-between;
 }
 
-.portfolio-item {
-  flex: 0 0 50%;
-  position: relative;
-  /* background-color: var(--bright); */
+.portfolio-item img {
+  max-width: 100%;
 }
 
-/* Portfolio Item Hover Effect */
-/* #portfolio-container {
-	opacity: 1;
-	transition: .3s ease-in-out;
-} */
+/* Portfolio image HOVER Effects */
 .hover-image:hover {
-	/* opacity: .5; */
   filter: brightness(1.25);
   transition: all .3s;
 }
@@ -149,11 +159,6 @@ img {
 #contact {
   padding: 60px;
 }
-
-/* #contact ul {
-  padding: 40px 10px;
-  justify-content: space-around;
-} */
 
 .contact-container {
   display: flex;
@@ -180,35 +185,20 @@ footer {
 /* Large Smartphones */
 @media screen and (max-width: 768px) {
   header {
-    min-height: 170px;
+    min-height: 180px;
   }
-
-  /* nav {
-    margin: 0;
-  } */
 
   li:has(a):hover {
     background-color: #202020;
   }
 
-  nav li {
-    padding: 12px 20px;
-  }
-
-  #contact li {
-    display: block;
-    text-align: center;
-    padding: 15px 0 0 0;
-  }
-
 }
 
 /* Small Smartphones */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
 
-    /* Stack portfolio images */
-    /* .portfolio-item {
-      width: 100%;
-      } */
+  nav ul {
+    flex-direction: column;
+  }
 
 }

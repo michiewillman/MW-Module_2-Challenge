@@ -107,8 +107,8 @@ img {
 }
 
 #profile-photo {
-  width: 200px;
-  height: auto;
+  width: 210px;
+  height: 210px;
   margin: 30px;
   border-radius: var(--rounded);
   border: var(--bright) solid 2px;
@@ -129,6 +129,7 @@ img {
 #portfolio-feature {
   position: relative;
   padding-top: 40px;
+  max-width: 1400px;
 }
 
 #portfolio-feature img {
@@ -140,6 +141,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1400px;
 }
 
 .portfolio-item img {

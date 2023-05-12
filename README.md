@@ -24,9 +24,11 @@ The following screenshot shows the web application's appearance:
 ## Link to Deployed Application
 
 This is the URL to the deployed application:
-
+https://michiewillman.github.io/MW-Module_2-Challenge/
 
 The code of this application is available through this GitHub repository:
+https://github.com/michiewillman/MW-Module_2-Challenge
+
 
 
 

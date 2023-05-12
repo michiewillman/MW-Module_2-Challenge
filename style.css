@@ -3,7 +3,7 @@
   --snow: #dadff7;
   --dark: #282728;
   --night: #1F1E1F;
-  --bright: #ccff33;
+  --bright: #7297FF;
   --rounded: 15px;
 }
 
@@ -47,8 +47,7 @@ nav a {
 }
 
 /* Nav links have hover background */
-nav li:hover, 
-#contact li:has(a):hover {
+nav li:hover {
   background-color: var(--bright);
 }
 
@@ -95,24 +94,30 @@ img {
   border-radius: var(--rounded);
 }
 
-
 /* About Section */
 #about {
   min-height: 50vh;
   padding: 60px;
   color: var(--snow);
+  display: flex;
+}
+
+#about div {
+  margin-top: 30px;
 }
 
 #profile-photo {
   width: 200px;
-  margin-bottom: 30px;
+  height: auto;
+  margin: 30px;
   border-radius: var(--rounded);
-  border: var(--bright) solid 1px;
+  border: var(--bright) solid 2px;
 }
 
 #about p {
   line-height: 1.2;
   margin-top: 20px;
+  max-width: 600px;
 }
 
 /* Portfolio Section Styling */
@@ -121,16 +126,14 @@ img {
   padding: 60px;
 }
 
-#portfolio button {
-  display: none;
-}
-
 #portfolio-feature {
   position: relative;
+  padding-top: 40px;
 }
 
 #portfolio-feature img {
   width: 100%;
+  border: 2px solid var(--bright);
 }
 
 #portfolio-container {
@@ -141,11 +144,13 @@ img {
 
 .portfolio-item img {
   max-width: 100%;
+  border: 2px solid var(--bright);
 }
 
 .portfolio-item {
   flex: 0 0 48%;
   position: relative;
+  padding-top: 40px;
 }
 
 /* Portfolio image HOVER Effects */
@@ -169,11 +174,13 @@ img {
   background-color: var(--bright);
   width: 180px;
   height: 60px;
+  border-radius: 0 5px 5px 0;
   display: block;
   position: absolute;
   left: 0;
   bottom: 20px;
   padding: 10px;
+  z-index: 100;
 }
 
 /* Contact Section */
@@ -182,14 +189,21 @@ img {
   color: var(--snow);
 }
 
+#contact ul {
+  padding-top: 20px;
+}
+
 #contact li {
-  display: block;
   margin: 15px 0;
 }
 
 #contact a {
   color: var(--snow);
   text-decoration: none;
+}
+
+#contact a:hover {
+  color: var(--bright);
 }
 
 /* Footer */
@@ -206,7 +220,11 @@ footer {
 }
 
 /* Large Smartphones */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  #about {
+    flex-direction: column;
+  }
+  
   .portfolio-item {
     flex: 0 0 100%;
   }
